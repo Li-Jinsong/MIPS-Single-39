@@ -23,7 +23,7 @@ MIPS单周期CPU，共支持39条指令。
 
 为了方便设计，此处取消了alucontrol信号，直接由alu_op向ALU传递信息，这样便不再需要ALUDec模块，可以全部交给CU模块完成。
 设计时，在初始CU的基础上逐个增加指令，并逐步完善CPU的框架。
-CU设计代码见[ControlUnit.v](sources\ControlUnit.v)
+CU设计代码见[ControlUnit.v](sources/ControlUnit.v)
 
 ## <font color = yellow> 3.数据通路DataPath设计 </font>
 
@@ -40,7 +40,7 @@ CU设计代码见[ControlUnit.v](sources\ControlUnit.v)
 此处ALU参考 XJTU 实验课PPT上提供的完整alu_op表设计，并在此基础上添加unsign信号端口以对部分运算区分无符号和有符号模式。
 ![ALU](ALU.jpg)
 **<font color = red>按照实验要求，ALU中加法部分采用基本门器件实现</font>**
-ALU设计代码见[ALU.v](sources\ALU.v)
+ALU设计代码见[ALU.v](sources/ALU.v)
 
 ### 3.3 PC设计
 
@@ -72,7 +72,7 @@ PC的实现其实就是一个D触发器，在时钟上升沿将数据打入，�
 ### 3.9 DataPath连接
 
 将上述各模块按照框架图进行连接，得到数据通路模块。
-代码见[DataPath.v](sources\DataPath.v)
+代码见[DataPath.v](sources/DataPath.v)
 
 ## <font color = yellow> 4.存储器Memory设计 </font>
 
@@ -89,7 +89,7 @@ IM通过读取相应的文件获取指令，并始终读出指令供CPU执行。
 ## <font color = orange> 5.MIPS-Lite指令集单周期CPU </font>
 
 将上述3大模块整合连接得到MIPS模块，即最终的CPU。
-代码见[MIPS.v](sources\MIPS.v)
+代码见[MIPS.v](sources/MIPS.v)
 
 ## <font color = orange> 6.测试 </font>
 
