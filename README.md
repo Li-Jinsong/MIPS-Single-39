@@ -29,6 +29,7 @@ CU设计代码见[ControlUnit.v](sources/ControlUnit.v)
 
 在设计CU的过程中，其实已经逐步完善扩展出CPU框架图。
 这样，数据通路只需要按照所设计的图纸将各部件实现并进行连接即可。
+
 ![DataPath](DataPath.jpg)
 
 ### 3.1 Add设计
